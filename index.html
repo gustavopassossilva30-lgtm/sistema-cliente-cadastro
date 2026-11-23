@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Clientes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cadastro de Clientes</h1>
+      <p class="subtitulo">Gerencie os dados dos clientes da empresa.</p>
+    </header>
+
+    <form id="form-cliente">
+      <div class="grid-form">
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" placeholder="Digite o nome" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="exemplo@email.com" required>
+        </div>
+
+        <div class="campo">
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" placeholder="(00) 00000-0000" required>
+        </div>
+
+        <div class="campo">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" placeholder="Digite a cidade" required>
+        </div>
+
+        <div class="campo">
+          <label for="cpf">CPF</label>
+          <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
+        </div>
+      </div>
+
+      <div class="botoes-form">
+        <button type="submit" id="btn-salvar" class="btn-azul">Salvar cliente</button>
+        <button type="button" id="btn-limpar-form" class="btn-cinza">Limpar</button>
+      </div>
+    </form>
+
+    <section class="lista-secao">
+      <div class="cabecalho-lista">
+        <h2>Clientes cadastrados <span id="badge-total" class="badge">Total: 0</span></h2>
+        <button type="button" id="btn-limpar-tudo" class="btn-vermelho">Limpar todos os registros</button>
+      </div>
+
+      <div class="barra-pesquisa">
+        <input type="text" id="pesquisa" placeholder="Pesquisar por nome ou e-mail">
+      </div>
+
+      <div class="tabela-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>CPF</th>
+              <th>Telefone</th>
+              <th>Cidade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-corpo">
+            <!-- Registros inseridos via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
